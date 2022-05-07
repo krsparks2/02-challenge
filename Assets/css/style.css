@@ -4,12 +4,15 @@
     --dark-color: #404660;
     --mid-color: #676D85;
     }
+
+/* set background color and font family */
 body {
     background-color: var(--mid-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--light-color);
 }
 
+/* set header formatting */
 .header {
     padding: 20px;
     background-color: var(--dark-color);
@@ -43,6 +46,7 @@ a {
     text-underline-offset: 10px;
 }
 
+/* sets formatting for header image and for floating text on header image */
 .header-img {
     height: 200px;
     width: 100%;
@@ -56,6 +60,7 @@ a {
     justify-content: flex-end;
 }
 
+/* sets background color on floating text on header image */
 .background-color{
     background-color: var(--dark-color);
     padding: 10px;
@@ -63,6 +68,7 @@ a {
     margin-right: 10px;
 }
 
+/*creates rows and columns on the page to give it its format */
 .row{
     display: flex;
     padding: 15px;
@@ -79,6 +85,21 @@ a {
     flex: 75%;
     padding:30px;
 }
+
+.work-column{
+    padding: 10px;
+    border: 2px solid var(--dark-color);
+}
+
+/* creates hover effect */
+.work-column:hover{
+    box-shadow: inset 0px 0px 10px var(--dark-color), 0 0 15px var(--dark-color); 
+}
+
+.work-column img{
+    width:50%;
+}
+
 h2{
     color: var(--light-color);
     margin-bottom: 20px;
