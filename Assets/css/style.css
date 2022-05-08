@@ -3,6 +3,7 @@
     --light-color: #C1C6DC;
     --dark-color: #404660;
     --mid-color: #676D85;
+    --contrast-color: #EFBE9E;
     }
 
 /* set background color and font family */
@@ -68,7 +69,7 @@ a {
     margin-right: 10px;
 }
 
-/*creates rows and columns on the page to give it its format */
+/*creates rows and columns on the page to give it, its format */
 .row{
     display: flex;
     padding: 15px;
@@ -86,22 +87,60 @@ a {
     padding:30px;
 }
 
-.work-column{
-    padding: 10px;
-    border: 2px solid var(--dark-color);
-}
-
 /* creates hover effect */
 .work-column:hover{
-    box-shadow: inset 0px 0px 10px var(--dark-color), 0 0 15px var(--dark-color); 
-}
-
-.work-column img{
-    width:50%;
+    box-shadow: inset 0px 0px 50px var(--light-color), 0 0 10px var(--light-color); 
 }
 
 h2{
     color: var(--light-color);
     margin-bottom: 20px;
     font-size: 30px;
+}
+
+/* creates grid container for the image grid for body of work */
+.grid-container {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 100% 100%;
+}
+
+/* sets formatting to grid */
+.grid-background-color{
+    background-color: var(--contrast-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color:var(--dark-color);
+}
+
+/* creates first grid item and makes it span the whole grid */
+.item1{
+    grid-column: 1 / span 2;
+}
+
+/* sets formatting for large work/body image and for floating text on large work/body image */
+.item1-img{ 
+    background-image: url("../images/boring-image-placeholder.png");
+    background-position: center;  
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border: 10px solid var(--contrast-color)
+}
+
+/* sets formatting for small work/body image and for floating text on small work/body image */
+.grid-item-img{ 
+    background-image: url("../images/boring-image-placeholder-sm.png");
+    background-position: center;  
+    height: 125px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    border: 10px solid var(--contrast-color)
 }
